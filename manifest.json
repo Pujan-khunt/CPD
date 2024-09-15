@@ -1,0 +1,41 @@
+{
+    "_example-of-comments": "This is a comment in a JSON file as JSON does not allow comments ",
+    "_explain-manifest-version": "This allows the parser to use this specific version of manifest",
+    "manifest_version": 3,
+    "_explain-name": "Name of browser extension as it will appear in the menu",
+    "name": "CPD",
+    "_explain-description": "what does the extension do as it will appear on the extension store similar to the 'name'",
+    "description": "A browser extension which allows everyone to draw on a canvas with a builtin library of shapes making life easier",
+    "_explain-version": "version number of extension helps track of different releases",
+    "version": 1.0,
+    "_explain-permissions": "List of all the permissions that the extension requires",
+    "_explain-activetab": "allows extension to access the currently active tab needed to inject scripts and interact with the content of the tab",
+    "_explain-storage": "grants access to browser's storage API, allowing extension to store and retrieve data",
+    "permissions": [
+        "activetab",
+        "storage"
+    ],
+    "action": {
+        "_explain-default_popup": "it specifies the popup.html file which will be activated when clicked on extension icon",
+        "default_popup": "popup.html",
+        "_explain-default_icon": "it specifies the icons which will be used in various parts of the browser's UI",
+        "default_icon": {
+            "16": "icons/icon.png",
+            "48": "icons/icon.png",
+            "128": "icons/icon.png"
+        }
+    },
+    "_explain-content-scripts": "defines the scripts which will be injected into the webpage",
+    "content_scripts": [
+        {
+            "_explain-content-scripts": "specifies on which URLs the extension can the script be injected on it is set to all URLs",
+            "matches": [
+                "<all_urls>"
+            ],
+            "_explain-js": "Lists the js files to be injected",
+            "js": [
+                "js/content.js"
+            ]
+        }
+    ]
+}
